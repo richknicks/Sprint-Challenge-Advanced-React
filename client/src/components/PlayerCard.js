@@ -1,18 +1,11 @@
 import React from "react";
 const PlayerCard = props => {
-  return (
-    <div>
-      {props.data.map(player=>{
-          return(
-              <div key={player.id}>
-                <p>{player.name}</p>
-                <p>{player.country}</p>
-                <p>{player.searches}</p>
-              </div>
-          )
-      })}
-      
-    </div>
-  );
+    return(
+        <div>
+        <p>Player name: {props.player.name}</p>
+        <p>Player country: {props.player.country}</p>
+        <p>Player searches: {props.player.searches}</p>
+        </div>
+    )
 };
 export default PlayerCard;

@@ -15,7 +15,7 @@ class App extends React.Component {
     .get('http://localhost:5000/api/players')
     .then(response=>{
       console.log('players',response.data)
-      this.state({players: response.data})
+      this.setState({players: response.data})
     })
     .catch(error=>{
       console.log('This is an error',error)
@@ -24,10 +24,9 @@ class App extends React.Component {
   render(){
   return (
     <div className="App">
-      {this.state.players.map(player=>{
-        <PlayerCard key={player.id} player={player}/>
-})}
-      
+      {this.state.players.map(player => (
+          <PlayerCard key={player.id} player={player} />
+        ))}
     </div>
   );
   }
