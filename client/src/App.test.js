@@ -10,6 +10,6 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
-test("renders PlayerCard component without crashing", ()=>{
+test("renders Nav component without crashing", ()=>{
   render(<Nav />)
-})
+});
